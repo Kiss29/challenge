@@ -12,6 +12,10 @@
      * [Backend](#backend)
      * [UnitTests](#unit-tests)
   * [Application](#application)
+    * [Topic](#topic)
+    * [Level1](#level-1)
+    * [Level2](#level-2)
+    * [Level3](#level-3)
 
 
 
@@ -149,14 +153,3 @@ interface CalculatorComponentValue {
     cards: number[];
 }
 ```
-
-
-
-[MIT](LICENSE) - Jota Teles - 2017
-
-## Special thanks
-
-* [Willian Ribeiro](https://github.com/willianribeiro);
-* [João Paulo](https://github.com/jpusp);
-readme.txt
-L'élément a fait l'objet d'un zoom arrière.
