@@ -1,0 +1,31 @@
+<form class="calculator-form" [formGroup]="calculatorForm" (ngSubmit)="onSubmit()">
+    <div class="shop-box">
+        <p><label for="shopId" class="form-label">Indiquez l'id du shop :</label></p>            
+        <input id="shop" type="number" formControlName="shopId" class="form-control"/>
+    </div>
+    <div class="calculator-label-container">  
+        <p><label for="amount">Montant désiré :</label></p>
+    </div>
+    <div class="value-box">
+        <input id="amount" type="number" formControlName="amount" class="form-control"/>
+        <div class="" *ngIf="serverResponse">
+            <div>
+                <button  [disabled]="!serverResponse.ceil || serverResponse.equal"
+                (click)="onUpperValue()" class="higher">Supérieur</button>            
+            </div>
+            <div>
+                <button [disabled]="!serverResponse.floor || serverResponse.equal"
+                (click)="onLowerValue()" class="lower">Inférieur</button>       
+            </div>
+        </div>
+    </div>
+    <div *ngIf="serverResponse && serverResponse.equal">
+        <p>Votre montant est composé des cartes suivantes : </p> 
+        <ul>
+            <li *ngFor="let cards of serverResponse.equal.cards">{{cards | json}}</li>
+        </ul>
+    </div>
+    <div>     
+        <button [disabled]="!canValid" class="submit" type="submit">Submit</button>    
+    </div>
+</form>
