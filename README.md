@@ -25,8 +25,7 @@
 ### Prerequisites
 
 You need some tools to launch the application. I suggest to follow this cool tutorial in french :
-<a href="https://www.ganatan.com/tutorials/demarrer-avec-angular" target="_blank>https://www.ganatan.com/tutorials/demarrer-avec-angular<a>
-
+https://www.ganatan.com/tutorials/demarrer-avec-angular"
 Be sure to get npm version **8.3.1 or later** and angular version 13.3.4 or above**
 
 Now, you need to clone the project from the main.
@@ -74,7 +73,7 @@ ng test
 
 You can reach the application on a navigator, like chrome.
 
-The adress is : <a href="http://www.localhost:4200" target="_blank>http://www.localhost:4200<a>
+http://www.localhost:4200
 
 ### Topic
 
