@@ -1,3 +1,63 @@
+* {
+  font-family: Roboto, Helvetica, sans-serif;
+}
+
+@media screen and (max-width: 395px) {
+  .calculator-label-container {
+    text-align: center;
+  }
+  .validate-button-container {
+    text-align: center;
+  }
+}
+
+.calculator-form {
+  box-sizing: border-box;
+  min-width: 220px;
+  max-width: 380px;
+  margin: 20px auto;
+  padding: 10px 30px;
+  box-shadow: lightgray 4px 4px 20px;
+  h2 {
+    margin-bottom: 0;
+  }
+  p {
+    font-weight: 300;
+    font-size: 16px;
+  }
+}
+
+.shop-box {
+  gap: 10px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:center;
+}
+
+input#shop {
+  width: 50px;
+}
+
+.calculator-label-container {
+  margin-bottom: 5px;
+}
+
+.calculator-label-container {
+  text-align: justify;
+}
+.value-box {
+  gap: 10px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:left;
+}
+
+input#amount {
+  width: 142px;
+  height: 100px;
+  font-size: 50px;
+}
+
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -10,8 +70,29 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
-.btn-margin{
-    margin-bottom: 5em;
+button:disabled,
+button[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
 }
 
-$input-height:70px;
+.higher, .lower {
+  height: 40px;
+  width: 150px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  background-color: rgb(48, 123, 221);
+  color: #fff;
+  border: none;
+}
+
+.submit {
+  height: 40px;
+  width: 150px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+}

@@ -1,9 +1,9 @@
 import { Component, OnInit, OnDestroy} from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { CalculatorService } from "../services/calculator-service"
-import {CalculatorServerResponse} from "../models/calculator-server-response"
-import {CalculatorValue} from "../models/calculator-value"
-import {FormsModule,ReactiveFormsModule} from '@angular/forms';
+import { CalculatorService } from "../services/calculator-service";
+import { CalculatorServerResponse } from "../models/calculator-server-response";
+import { CalculatorValue } from "../models/calculator-value";
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { first, merge, map, Observable, Subject } from "rxjs";
 
 @Component({
@@ -18,17 +18,16 @@ export class ReactiveCalculatorComponent implements OnInit, OnDestroy {
   private destroy$!:Subject<boolean>
   canValid:boolean=false
   calculatorValues!:CalculatorValue
-  upperDisabled!:boolean;
-  floorExist!:boolean;
+  integerRegex!: RegExp
+
   constructor(private formBuilder: FormBuilder, private calculatorService: CalculatorService) { }
   
-
   ngOnInit(): void {
     this.destroy$ = new Subject<boolean>()
-    let integerRegex=/^[0-9]*$/;    
+    this.integerRegex=/^[0-9]*$/;    
     this.calculatorForm = this.formBuilder.group({
-      shopId:[5 ,[Validators.required, Validators.pattern(integerRegex), Validators.max(10), Validators.min(0)]],
-      amount:[0, [Validators.required, Validators.pattern(integerRegex), Validators.max(9007199254740991), Validators.min(0)]]      
+      shopId:[5, [Validators.required, Validators.pattern(this.integerRegex), Validators.max(10), Validators.min(0)]],
+      amount:[0, [Validators.required, Validators.pattern(this.integerRegex), Validators.max(9007199254740991), Validators.min(0)]]      
     })
 
     this.calculatorForm.get('amount')?.valueChanges.subscribe((amount:number) => {
