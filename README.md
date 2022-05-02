@@ -25,8 +25,7 @@
 ### Prerequisites
 
 You need some tools to launch the application. I suggest to follow this cool tutorial in french :
-<a href="https://www.ganatan.com/tutorials/demarrer-avec-angular" target="_blank>https://www.ganatan.com/tutorials/demarrer-avec-angular<a>
-
+https://www.ganatan.com/tutorials/demarrer-avec-angular"
 Be sure to get npm version **8.3.1 or later** and angular version 13.3.4 or above**
 
 Now, you need to clone the project from the main.
@@ -38,7 +37,7 @@ git clone "https://github.com/Kiss29/challenge-wedoogifts.git"
 ### Frontend
 
 
-With your Terminal or equivalent go to the folder frontend/calculator-front/ and write :
+With your Terminal or equivalent go to the folder calculator-front/ and write :
 
 ```
 npm install
@@ -51,7 +50,7 @@ ng serve
 
 ### Backend
 
-Open a new tab or a new Terminal, go to the folder frontend/calculator-server/ and do the next command :
+Open a new tab or a new Terminal, go to the folder calculator-server/ and do the next command :
 ```
 npm install 
 ```
@@ -65,7 +64,7 @@ npm start
 
 Since you have AngularCLI you can use Karma and Jasmine
 They  are great frameworks for unit tests.
-To do it, you have to go to the folder frontend/calculator-front/ and do :
+To do it, you have to go to the folder calculator-front/ and do :
 ```
 ng test
 ```
@@ -74,7 +73,7 @@ ng test
 
 You can reach the application on a navigator, like chrome.
 
-The adress is : <a href="http://www.localhost:4200" target="_blank>http://www.localhost:4200<a>
+http://www.localhost:4200
 
 ### Topic
 
